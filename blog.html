@@ -1,11 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>blog</title>
+    <title>PH - assignment 5</title>
+
+    <!-- google font (lexend) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- tailwind with daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- tailwind config file -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                btn_color: '#B4F461',
+                bg_color: '#F9F7F3',
+              },
+             
+             fontFamily:{
+                lexend: ['Lexend', 'sans-serif'],
+              }
+            }
+          }
+        }
+    </script>
+    
 </head>
-<body>
-    <h1>helol blog</h1>
+<body class="font-lexend">
+
+    <!-- Header section -->
+   <header class="  sticky top-0">
+      <div class="bg-bg_color py-5">
+        <nav class="container mx-auto flex justify-between items-center ">
+          <button id="home-btn" class="font-medium text-xl px-4 py-1 rounded-md bg-btn_color text-black">Home</button>
+          <div class="logo flex items-center gap-2">
+            <img src="./assets/images/logo.png" alt="logo" class=""> <span class="font-medium text-xl">Donate Bangladesh</span>
+          </div>
+          <div class="balance flex items-center gap-2 font-medium text-xl">
+            <img src="./assets/images/coin.png" alt="coin" class=""> <p id="myBalance" class="font-medium text-xl">10000</p> BDT
+          </div>
+          
+        </nav>
+      </div>
+      
+    </header>
+
+
+    <main class="container mx-auto px-3">
+     <div class="faq-container">
+        <div class="collapse bg-base-200">
+            <input type="radio" name="my-accordion-1" checked="checked" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+          <div class="collapse bg-base-200">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+          <div class="collapse bg-base-200">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+     </div>
+    </main>
+
+    <footer class="h-[100px] bg-bg_color mt-9"></footer>
+
+    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/main.js"></script>
+  
 </body>
 </html>
