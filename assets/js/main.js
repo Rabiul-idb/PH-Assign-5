@@ -2,7 +2,7 @@
 //blog btn href to blog.html
 document.getElementById('blog-btn').addEventListener('click', function(event){
     event.preventDefault();
-    window.location.href = 'blog.html';
+    window.location.href = './blog.html';
 })
 
 
@@ -25,18 +25,17 @@ historyBtn.addEventListener('click', function(){
 
 })
 
-// Donation Card Functionality =====
+// Donation Card Functionality >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-// donation for noakhali
+// DONATION FOR NOAKHALI
 document.getElementById('donate-for-nuakhali').addEventListener('click', function(event){
     event.preventDefault();
     
     const myBalanceValue = getBalance('myBalance');
     const totalDonationAmount = getdonationAmount('donation-nuakhali');
     const donateAmount = getDonateAmount('donate-amount-noakhali');
-    
 
-    if(donateAmount < 0 || typeof donateAmount !== 'number' || isNaN(donateAmount)){
+    if(donateAmount <= 0 || typeof donateAmount !== 'number' || isNaN(donateAmount)){
         alert('Invalid Input. Make sure that, your donation amount will be a positive number');
         return ;
     }
@@ -58,20 +57,18 @@ document.getElementById('donate-for-nuakhali').addEventListener('click', functio
     // open modal
     document.getElementById('modal-donate-amount').innerText = donateAmount;
      my_modal_1.showModal()
-    
    
 })
 
-// donation for feni
+// DONATION FOR FENI
 document.getElementById('donate-for-feni').addEventListener('click', function(event){
     event.preventDefault();
-
     
     const myBalanceValue = getBalance('myBalance');
     const totalDonationAmount = getdonationAmount('donation-feni');
     const donateAmount = getDonateAmount('donate-amount-feni');
 
-    if(donateAmount < 0 || typeof donateAmount !== 'number' || isNaN(donateAmount)){
+    if(donateAmount <= 0 || typeof donateAmount !== 'number' || isNaN(donateAmount)){
         alert('Invalid Input. Make sure that, your donation amount will be a positive number');
         return ;
     }
@@ -79,7 +76,6 @@ document.getElementById('donate-for-feni').addEventListener('click', function(ev
         alert("Sorry! you don't have enough balance");
         return;
     }
-
 
     const totalAmount = totalDonationAmount + donateAmount;
     document.getElementById('donation-feni').innerText = totalAmount;
@@ -96,7 +92,7 @@ document.getElementById('donate-for-feni').addEventListener('click', function(ev
    
 })
 
-// donation for quota protest
+// DONATION FOR QUOTA PROTEST
 document.getElementById('donate-for-quota').addEventListener('click', function(event){
     event.preventDefault();
     
@@ -104,7 +100,7 @@ document.getElementById('donate-for-quota').addEventListener('click', function(e
     const totalDonationAmount = getdonationAmount('donation-quota');
     const donateAmount = getDonateAmount('donate-amount-quota');
 
-    if(donateAmount < 0 || typeof donateAmount !== 'number' || isNaN(donateAmount)){
+    if(donateAmount <= 0 || typeof donateAmount !== 'number' || isNaN(donateAmount)){
         alert('Invalid Input. Make sure that, your donation amount will be a positive number');
         return ;
     }

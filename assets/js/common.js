@@ -1,3 +1,4 @@
+
 //get balance
 function getBalance(id){
     const myBalance = document.getElementById(id).innerText;
@@ -5,7 +6,7 @@ function getBalance(id){
     return myBalanceValue;
 }
 
-// get donation amount
+// get Current donation amount
 function getdonationAmount (id){
     const donationAmount = document.getElementById(id).innerText;
     const totalDonationAmount = parseFloat(donationAmount);
@@ -16,9 +17,9 @@ function getdonationAmount (id){
 function getDonateAmount(id){
     const amount = document.getElementById(id).value;
     const DonateAmount = parseFloat(amount);
-    document.getElementById(id).innerText = '';
+    document.getElementById(id).value = '';
+
     return DonateAmount;
-    
 }
 
 // history item maker
@@ -27,7 +28,7 @@ function historyMaker(id , amount){
     const div = document.createElement('div');
     div.classList.add('history-item', 'p-5', 'border', 'rounded-lg', 'mb-4');
     div.innerHTML = `
-        <h3 class="font-medium text-xl mb-3">${amount} TK ${title}</h3>
+        <h3 class="font-medium text-lg sm:text-xl mb-3">${amount} TK ${title}</h3>
         <p class=" text-base">${Date()}</p>
     `
     document.getElementById('history-container').appendChild(div);

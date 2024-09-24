@@ -36,7 +36,7 @@
 <body class="font-lexend">
 
     <!-- Header section -->
-   <header class="  sticky top-0">
+   <header class="  sticky top-0 z-10">
     <div class="bg-bg_color py-5">
       <nav class="container mx-auto px-3 flex justify-between items-center ">
         <button id="home-btn" class="btn font-medium text-xl px-4 py-1 rounded-md bg-btn_color text-black">Home</button>
@@ -61,42 +61,50 @@
         <input type="radio" name="my-accordion-2" checked="checked" />
         <div class="collapse-title text-xl font-medium">What is the document Object Moder (DOM)?</div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p>Document Object Model (DOM) represent a web page as a tree of Object. With DOM we can dynamically change the content, value without reloading the webpages.</p>
         </div>
       </div>
       <div class="collapse collapse-arrow bg-base-200 mb-5">
         <input type="radio" name="my-accordion-2" />
         <div class="collapse-title text-xl font-medium">How Do You Select an Element from the DOM?</div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p>we can select a element in many ways. such as: <br>
+             1. getElementById
+             2. getElementsByClassName
+             3. getElementsByTagName
+             4. querySelector()
+             5. querySelectorAll()
+            </p>
         </div>
       </div>
       <div class="collapse collapse-arrow bg-base-200 mb-5">
         <input type="radio" name="my-accordion-2" />
         <div class="collapse-title text-xl font-medium">What is Event Delegation in the Context of the DOM , and Why it is Useful?</div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p>By event delegation , We can detect every click event on a specicif item , instead of click event. Event delegation improves efficiency and scalibility and reduces the number of click events</p>
         </div>
       </div>
       <div class="collapse collapse-arrow bg-base-200 mb-5">
         <input type="radio" name="my-accordion-2" />
         <div class="collapse-title text-xl font-medium">How do you Manupulate's an Element attribute and style in the DOM?</div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p>We can manipulate an element's attribute by getAttribute(), setAttribute() and removeAttribute() methodes.<br>
+          and we can Manipulate an Element's style by style property. 
+          </p>
         </div>
       </div>
 
      </div>
     </main>
 
-    <footer class="h-[100px] bg-bg_color mt-9 flex justify-center items-center">
+    <footer class="h-[100px] bg-bg_color mt-9 flex justify-center items-center px-3">
       <p class=" font-medium">Copyright and all rights reserved by Md. Rabiul Islam</p>
     </footer>
 
     <script>
       document.getElementById('home-btn').addEventListener('click', function(event){
         event.preventDefault();
-        window.location.href = 'index.html';
+        window.location.href = './index.html';
         
       })
     </script>
