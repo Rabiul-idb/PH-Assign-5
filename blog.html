@@ -37,50 +37,69 @@
 
     <!-- Header section -->
    <header class="  sticky top-0">
-      <div class="bg-bg_color py-5">
-        <nav class="container mx-auto flex justify-between items-center ">
-          <button id="home-btn" class="font-medium text-xl px-4 py-1 rounded-md bg-btn_color text-black">Home</button>
-          <div class="logo flex items-center gap-2">
-            <img src="./assets/images/logo.png" alt="logo" class=""> <span class="font-medium text-xl">Donate Bangladesh</span>
-          </div>
-          <div class="balance flex items-center gap-2 font-medium text-xl">
-            <img src="./assets/images/coin.png" alt="coin" class=""> <p id="myBalance" class="font-medium text-xl">10000</p> BDT
-          </div>
-          
-        </nav>
-      </div>
+    <div class="bg-bg_color py-5">
+      <nav class="container mx-auto px-3 flex justify-between items-center ">
+        <button id="home-btn" class="btn font-medium text-xl px-4 py-1 rounded-md bg-btn_color text-black">Home</button>
+        <div class="logo flex items-center gap-2">
+          <img src="./assets/images/logo.png" alt="logo" class=""> <span class="font-medium text-xl hidden sm:block">Donate Bangladesh</span>
+        </div>
+        <div class="balance flex items-center gap-2 font-medium text-xl">
+          <img src="./assets/images/coin.png" alt="coin" class=""> <p id="myBalance" class="font-medium text-lg sm:text-xl">10000</p> <span class="hidden sm:block">BDT</span>
+        </div>
+        
+      </nav>
+    </div>
       
     </header>
 
 
-    <main class="container mx-auto px-3">
+    <main class="container mx-auto px-3 mt-7">
+      <h2 class="text-4xl font-bold mb-7">Important FAQ</h2>
      <div class="faq-container">
-        <div class="collapse bg-base-200">
-            <input type="radio" name="my-accordion-1" checked="checked" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-            <div class="collapse-content">
-              <p>hello</p>
-            </div>
-          </div>
-          <div class="collapse bg-base-200">
-            <input type="radio" name="my-accordion-1" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-            <div class="collapse-content">
-              <p>hello</p>
-            </div>
-          </div>
-          <div class="collapse bg-base-200">
-            <input type="radio" name="my-accordion-1" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-            <div class="collapse-content">
-              <p>hello</p>
-            </div>
-          </div>
+
+      <div class="collapse collapse-arrow bg-base-200 mb-5">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">What is the document Object Moder (DOM)?</div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200 mb-5">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">How Do You Select an Element from the DOM?</div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200 mb-5">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">What is Event Delegation in the Context of the DOM , and Why it is Useful?</div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200 mb-5">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">How do you Manupulate's an Element attribute and style in the DOM?</div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+
      </div>
     </main>
 
-    <footer class="h-[100px] bg-bg_color mt-9"></footer>
+    <footer class="h-[100px] bg-bg_color mt-9 flex justify-center items-center">
+      <p class=" font-medium">Copyright and all rights reserved by Md. Rabiul Islam</p>
+    </footer>
 
+    <script>
+      document.getElementById('home-btn').addEventListener('click', function(event){
+        event.preventDefault();
+        window.location.href = 'index.html';
+        
+      })
+    </script>
     <script src="./assets/js/common.js"></script>
     <script src="./assets/js/main.js"></script>
   
